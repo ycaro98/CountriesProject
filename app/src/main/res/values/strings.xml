@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">CountriesProject</string>
+    <string name="title">Países</string>
+    <string name="coin">Currency</string>
+    <string name="language">Language</string>
+    <string name="num_inab">68 455 083</string>
+    <string name="numhabDetails">Population</string>
+    <string name="continent">Continent</string>
+    <string name="geoExtension">Geographic Extension</string>
+    <string name="country">Brazil</string>
+    <string name="city">City</string>
+    <string name="capital">Capital</string>
+    <string name="size">Size</string>
+    <string name="otherApp">Sobre o Aplicativo</string>
+    <string name="reason">Este aplicativo foi desenvolvido para fins didáticos, visando o aprendizado das tecnologias de front-end Android. </string>
+    <string name="information">As informações sobre os países estão disponíveis na Internet de maneira pública.</string>
+    <string name="text_copyrightImage">As imagens utilizadas neste projeto estão disponíveis sob a licença Creative Commons em:</string>
+    <string name="link_copyrightImage"><a href="https://creativecommons.org/licenses/by/2.0">https://creativecommons.org/licenses/by/2.0</a></string>
+    <string name="text_copyrightFlags">Os ícones das bandeiras foram retirados do site:</string>
+    <string name="link_copyrightFlags"><a href="https://www.freepik.com">https://www.freepik.com</a></string>
+    <string name="text_otherImages">As demais imagens utilizadas no projeto estão disponíveis em:</string>
+    <string name="link_otherImages"><a href="https://www.flickr.com">https://www.flickr.com</a></string>
+    <string name="Description_title">A image with a description of country in detail</string>
+    <string name="description_sobreDetalhes">icon with the function of showing more information about the page</string>
+    <string name="description_setaDireitaDetalhes">arrow icon with the function to go back to the previous page</string>
+    <string name="lorem_ipslum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel arcu ac felis convallis condimentum. Mauris ac mattis risus. In venenatis enim ac nulla sollicitudin scelerisque. Curabitur a placerat mi. Suspendisse potenti. Aliquam eu malesuada diam. Maecenas tristique, est id egestas vulputate, ante sapien luctus velit, a hendrerit nibh magna a turpis. Ut vestibulum urna in consequat maximus. Vivamus laoreet urna ut lacus consectetur, ut porta orci viverra. Sed pretium tincidunt lectus sit amet maximus. Nam non orci et felis iaculis semper non vitae dolor. In hac habitasse platea dictumst. Vivamus fermentum nec dui at elementum. Aenean dui magna, laoreet sit amet lacinia vitae, rutrum eu massa.
+Integer nec efficitur lectus. Pellentesque ipsum mi, convallis vel erat id, viverra vestibulum urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut in ornare dui, convallis ultricies ex. Maecenas rutrum nunc eleifend magna consequat, id semper augue consectetur. Donec ultricies odio nec ante auctor, at lacinia urna posuere. Nulla ac tellus ultricies, pretium orci ut, pharetra nisi. Nullam blandit ultricies tortor, vel congue sapien mollis id. Cras sit amet congue urna. Donec auctor consectetur velit ac feugiat. Etiam eget dui ipsum. Donec non finibus arcu. Donec ex felis, aliquam et nulla eget, pellentesque aliquam est. Maecenas ullamcorper elit sit amet metus vehicula condimentum. Nam nec feugiat nibh. Phasellus eget odio ac tortor rutrum mattis at ut nunc. Aliquam erat volutpat. Donec scelerisque, tellus id varius ullamcorper, nisl felis lacinia lacus, sit amet interdum urna quam sit amet mauris.Ut in ipsum metus. Vestibulum vitae mauris quis urna semper cursus quis cursus ante. Pellentesque metus metus, euismod sit amet consectetur non, fringilla eu ligula. Sed quis pharetra libero. Sed lacinia pharetra tincidunt. Aenean id pretium diam.
+Fusce eu sem massa. Nullam non porttitor ipsum, sed porta mauris. Nullam imperdiet sapien ac neque dictum, quis rutrum justo tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus lectus enim, sit amet pulvinar urna varius sit amet. Sed velit nunc, auctor at ultrices vitae, euismod ut tortor. In pharetra tortor id massa euismod, a condimentum libero eleifend. Fusce quis interdum elit, at rhoncus purus. Cras ultricies turpis at nibh venenatis, ut iaculis lectus interdum. In hac habitasse platea dictumst. Fusce sagittis neque tellus, at tincidunt magna vehicula id. Quisque non ullamcorper lacus. Duis leo sapien, convallis eu lectus bibendum, tempus rutrum est. Donec dapibus malesuada porttitor. Vestibulum eu metus ac eros ullamcorper bibendum sit amet nec neque. Phasellus in sem molestie, suscipit justo non, sagittis ex. Nulla et auctor tortor. Morbi gravida in sapien ac volutpat. Proin porttitor diam quis lorem commodo tincidunt.</string>
+    <string name="anotherDetails">function of detailing the photo of the country and the copyright of the country photo</string>
+    <string name="setaDireitaDetails">functionality to go back to the previous page</string>
+    <string name="settings">settings</string>
+    <string name="help">help</string>
+    <string name="seta_direita">seta_direita</string>
+    <string name="my_application">countriesproject</string>
+    <string name="recebe_uma_imagem_do_pa_s_em_quest_o">Recebe uma imagem do país em questão</string>
+    <string name="information_icon">information_icon</string>
+    <string name="message">message</string>
+    <string name="ok">OK</string>
+    <string name="yes">yes</string>
+    <string name="no">no</string>
+    <string name="creative_commons">A imagem acima está sob a licença creative commons</string>
+    <string name="abrir_imagem">Abrir imagem</string>
+    <string name="bandeira">Bandeira do país em questão</string>
+    <string name="icone_de_localizacao">ícone de localização</string>
+    <string name="icon_numero_habitantes">número de habitantes</string>
+    <string name="icon_moeda">ícone de moeda</string>
+</resources>

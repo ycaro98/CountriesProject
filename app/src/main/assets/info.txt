@@ -1,0 +1,105 @@
+#
+area: 242495
+capital: Londres
+continent: Europa
+currency: Libras
+description: Reino Unido, oficialmente Reino Unido da Grã-Bretanha e Irlanda do Norte, é um Estado soberano insular localizado em frente à costa noroeste do continente europeu. O atual Reino Unido foi formado após o surgimento do Estado Livre Irlandês em 1922, que ganhou independência da coroa britânica. O Reino Unido é uma união política de quatro "países constituintes": Escócia, Inglaterra, Irlanda do Norte e País de Gales. O governo é regido por um sistema parlamentar, cuja sede está localizada na cidade de Londres, a capital, e por uma monarquia constitucional que tem a rainha Isabel II como a chefe de Estado.
+icon: united-kingdom.png
+image: uk.jpg
+image-author: Giuseppe Milo
+image-name: Tower bridge - London, United Kingdom
+language: Inglês
+name: Reino Unido
+population: 68455083
+url: https://www.flickr.com/photos/giuseppemilo/45679070022
+
+#
+area: 9371175
+capital: Washington
+continent: América do Norte
+currency: Dólar
+description: Estados Unidos da América são uma república constitucional federal composta por 50 estados e um distrito federal. A maior parte do país situa-se na região central da América do Norte, formada por 48 estados e o Distrito de Colúmbia, o distrito federal da capital. Os Estados Unidos são uma das nações mais multiculturais e etnicamente diversas do mundo, produto da forte imigração vinda de muitos países. Sua geografia e sistemas climáticos também são extremamente diversificados, com desertos, planícies, florestas e montanhas que abrigam uma grande variedade de espécies.
+icon: united-states.png
+image: usa.jpg
+image-author: Ed Uthman
+image-name: United States Capitol
+language: Inglês
+name: Estados Unidos da América
+population: 331449281
+url: https://www.flickr.com/photos/euthman/30079937645
+
+#
+area: 92256
+capital: Lisboa
+continent: Europa
+currency: Euro
+description: Portugal, oficialmente República Portuguesa, é um país soberano unitário localizado no sudoeste da Europa, cujo território se situa na zona ocidental da Península Ibérica e em arquipélagos no Atlântico Norte. O território português tem uma área total de 92 090 km², sendo delimitado a norte e leste por Espanha e a sul e oeste pelo oceano Atlântico, compreendendo uma parte continental e duas regiões autónomas: os arquipélagos dos Açores e da Madeira. Portugal é a nação mais a ocidente do continente europeu. O nome do país provém da sua segunda maior cidade, Porto, cujo nome latino-celta era Portus Cale.
+icon: portugal.png
+image: pt.jpg
+image-author: Vitor Oliveira
+image-name: Lisboa - Portugal
+language: Português
+name: Portugal
+population: 10347892
+url: https://www.flickr.com/photos/vitor107/22462269442
+
+#
+area: 8510345
+capital: Brasília
+continent: América do Sul
+currency: Real
+description: Brasil é o maior país da América do Sul e da região da América Latina, sendo o quinto maior do mundo em área territorial, com 8 510 345,538 km² e sexto em população. É o único país na América onde se fala majoritariamente a língua portuguesa e o maior país lusófono do planeta, além de ser uma das nações mais multiculturais e etnicamente diversas, em decorrência da forte imigração oriunda de variados locais do mundo. Sua atual Constituição, promulgada em 1988, concebe o Brasil como uma república federativa presidencialista, formada pela união dos 26 estados, do Distrito Federal e dos 5 570 municípios.
+icon: brazil.png
+image: bra.jpg
+image-author: Revol Web
+image-name: Brasil
+language: Português
+name: Brasil
+population: 213317639
+url: https://www.flickr.com/photos/revolweb/15956587634
+
+#
+area: 22072
+capital: Jerusalém
+continent: Oriente Médio
+currency: Novo Shekel
+description: Israel é uma democracia parlamentar localizada no Oriente Médio, ao longo da costa oriental do Mar Mediterrâneo. O país faz fronteira com o Líbano ao norte, com a Síria a nordeste, com a Jordânia e a Cisjordânia a leste, com o Egito e a Faixa de Gaza ao sudoeste, e com o Golfo de Aqaba, no Mar Vermelho, ao sul. Geograficamente, contém diversas características dentro de seu território relativamente pequeno. Israel é definido como um "Estado Judeu e Democrático" em suas Leis Básicas e é o único Estado de maioria judia do mundo. O centro financeiro de Israel é Telavive, enquanto Jerusalém é a cidade mais populosa do país e sua capital.
+icon: israel.png
+image: il.jpg
+image-author: Joachim Tuns
+image-name: Jerusalem
+language: Hebraico
+name: Israel
+population: 9069960
+url: https://www.flickr.com/photos/61168666@N00/14810008360
+
+#
+area: 337975
+capital: Tóquio
+continent: Ásia
+currency: Iene
+description: Japão é um país insular da Ásia Oriental. Localizado no Oceano Pacífico, a leste do Mar do Japão, da República Popular da China, da Coreia do Norte, da Coreia do Sul e da Rússia, se estendendo do Mar de Okhotsk, no norte, ao Mar da China Oriental e Taiwan, ao sul. Os caracteres que compõem seu nome significam "Origem do Sol", razão pela qual o Japão é às vezes identificado como a "Terra do Sol Nascente". Como grande potência econômica, possui a terceira maior economia do mundo em PIB nominal e a quarta maior em poder de compra. É também o quarto maior exportador e o quarto maior importador do mundo, além de ser o único país asiático membro do G7.
+icon: japan.png
+image: jpn.jpg
+image-author: Francisco Frestivo
+image-name: Shibuya
+language: Japonês
+name: Japão
+population: 126444000
+url: https://www.flickr.com/photos/frestivo/4786015857
+
+#
+area: 9596961
+capital: Pequim
+continent: Ásia
+currency: Renminbi
+description: República Popular da China, também conhecida simplesmente como China, é o maior país da Ásia Oriental e o mais populoso do mundo, com mais de 1,38 bilhão de habitantes, quase um quinto da população da Terra. É uma república popular socialista unipartidária. Na constituição, descreve-se como um sistema multipartidário de cooperação e consulta política sob a liderança do Partido Comunista da China e como uma "ditadura democrática popular liderada pela classe trabalhadora e baseada na aliança de trabalhadores e camponeses".
+icon: china.png
+image: chn.jpg
+image-author: Diego Aviles
+image-name: China
+language: Mandarim
+name: China
+population: 1397897720
+url: https://www.flickr.com/photos/diegoaviles/9521940433
+

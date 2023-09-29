@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutActivity">
+
+    <TextView
+        android:id="@+id/reason"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/reason"
+        android:textSize="16sp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/information"/>
+
+    <TextView
+        android:id="@+id/information"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/information"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/reason"
+        app:layout_constraintStart_toStartOf="@id/reason"
+        app:layout_constraintEnd_toEndOf="@id/reason"
+        app:layout_constraintBottom_toTopOf="@id/text_copyrightImage" />
+
+    <TextView
+        android:id="@+id/text_copyrightImage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/text_copyrightImage"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/information"
+        app:layout_constraintStart_toStartOf="@id/reason"
+        app:layout_constraintEnd_toEndOf="@id/reason"
+        app:layout_constraintBottom_toTopOf="@id/link_copyrightImage"/>
+
+    <TextView
+        android:id="@+id/link_copyrightImage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp"
+        android:text="@string/link_copyrightImage"
+        android:textColor="#458FFF"
+        app:layout_constraintTop_toBottomOf="@id/text_copyrightImage"
+        app:layout_constraintStart_toStartOf="@id/reason"
+        app:layout_constraintEnd_toEndOf="@id/reason"
+        app:layout_constraintBottom_toTopOf="@id/text_copyrightFlags"/>
+
+    <TextView
+        android:id="@+id/text_copyrightFlags"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp"
+        android:text="@string/text_copyrightFlags"
+        app:layout_constraintTop_toBottomOf="@id/link_copyrightImage"
+        app:layout_constraintStart_toStartOf="@id/reason"
+        app:layout_constraintEnd_toEndOf="@id/reason"
+        app:layout_constraintBottom_toTopOf="@id/link_copyrightFlags"/>
+
+    <TextView
+        android:id="@+id/link_copyrightFlags"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp"
+        android:textColor="#458FFF"
+        android:text="@string/link_copyrightFlags"
+        app:layout_constraintTop_toBottomOf="@id/text_copyrightFlags"
+        app:layout_constraintStart_toStartOf="@id/reason"
+        app:layout_constraintEnd_toEndOf="@id/reason"
+        app:layout_constraintBottom_toTopOf="@id/text_otherImages"/>
+
+    <TextView
+        android:id="@+id/text_otherImages"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp"
+        android:text="@string/text_otherImages"
+        app:layout_constraintTop_toBottomOf="@id/link_copyrightFlags"
+        app:layout_constraintStart_toStartOf="@id/reason"
+        app:layout_constraintEnd_toEndOf="@id/reason"
+        app:layout_constraintBottom_toTopOf="@id/link_otherImages"/>
+
+    <TextView
+        android:id="@+id/link_otherImages"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp"
+        android:textColorHint="#458FFF"
+        android:text="@string/link_otherImages"
+        app:layout_constraintTop_toBottomOf="@id/text_otherImages"
+        app:layout_constraintStart_toStartOf="@id/reason"
+        app:layout_constraintEnd_toEndOf="@id/reason"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

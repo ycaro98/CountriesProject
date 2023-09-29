@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:fitsSystemWindows="true"
+        android:theme="@style/Base.Theme.MyApplication.Toolbar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="#005CA9"
+            app:expandedTitleMarginStart="48dp"
+            app:expandedTitleMarginEnd="64dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:toolbarId="@id/toolbarDetail">
+
+            <ImageView
+                android:id="@+id/countryDetailImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                app:layout_collapseMode="parallax"
+                app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
+                tools:src="@drawable/bra"
+                android:contentDescription="@string/recebe_uma_imagem_do_pa_s_em_quest_o" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarDetail"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:layout_scrollFlags="scroll|enterAlways"
+                tools:title="toolbarDetail"/>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="24dp">
+
+            <TextView
+                android:id="@+id/descriptionCountry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                tools:maxLines="1"
+                android:textSize="16sp"
+                tools:text="@string/lorem_ipslum"
+                app:layout_constraintBottom_toTopOf="@id/location_details"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_margin="@dimen/card_margin"/>
+
+            <ImageView
+                android:id="@+id/location_details"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/location"
+                app:tint="#656565"
+                app:layout_constraintStart_toStartOf="@id/descriptionCountry"
+                app:layout_constraintTop_toBottomOf="@id/descriptionCountry"
+                android:importantForAccessibility="no"/>
+
+            <TextView
+                android:id="@+id/continentName"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                tools:text="South America"
+                android:textSize="16sp"
+                android:layout_marginStart="24dp"
+                android:textColor="#656565"
+                app:layout_constraintStart_toEndOf="@id/location_details"
+                app:layout_constraintEnd_toEndOf="@id/descriptionCountry"
+                app:layout_constraintTop_toTopOf="@id/location_details"
+                />
+
+            <TextView
+                android:id="@+id/continentDetails"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/continent"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@id/continentName"
+                app:layout_constraintStart_toStartOf="@id/continentName"
+                app:layout_constraintTop_toBottomOf="@id/continentName"/>
+
+            <TextView
+                android:id="@+id/cityDetails"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                tools:text="@string/city"
+                android:textColor="#656565"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="@id/continentName"
+                app:layout_constraintTop_toBottomOf="@id/continentDetails"
+                app:layout_constraintEnd_toEndOf="@id/continentName"/>
+            <TextView
+                android:id="@+id/CapitalDetails"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/capital"
+                android:textColor="#656565"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@id/continentName"
+                app:layout_constraintStart_toStartOf="@id/continentName"
+                app:layout_constraintTop_toBottomOf="@id/cityDetails"/>
+
+            <TextView
+                android:id="@+id/languageDetails"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                tools:text="@string/language"
+                android:textColor="#656565"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="@id/continentName"
+                app:layout_constraintTop_toBottomOf="@id/CapitalDetails"
+                app:layout_constraintEnd_toEndOf="@id/continentName" />
+            <TextView
+                android:id="@+id/descriptionLanguage"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/language"
+                android:textColor="#656565"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@id/continentName"
+                app:layout_constraintStart_toStartOf="@id/continentName"
+                app:layout_constraintTop_toBottomOf="@id/languageDetails"/>
+
+            <View
+                android:id="@+id/divisor1"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:layout_marginTop="14dp"
+                app:layout_constraintTop_toBottomOf="@id/descriptionLanguage"
+                app:layout_constraintStart_toStartOf="@id/descriptionLanguage"
+                app:layout_constraintEnd_toEndOf="parent"/>
+            
+            <ImageView
+                android:id="@+id/peopleIcon"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/people"
+                android:layout_marginEnd="24dp"
+                app:layout_constraintEnd_toStartOf="@id/numhabDetails"
+                app:layout_constraintTop_toTopOf="@id/numhabDetails"
+                android:importantForAccessibility="no" />
+
+            <TextView
+                android:id="@+id/numhabDetails"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                tools:text="@string/num_inab"
+                android:textColor="#656565"
+                android:textSize="16sp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintStart_toStartOf="@id/continentName"
+                app:layout_constraintTop_toBottomOf="@id/divisor1"
+                app:layout_constraintEnd_toEndOf="@id/continentName"/>
+
+            <TextView
+                android:id="@+id/descriptionNumhab"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/numhabDetails"
+                android:textColor="#656565"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/continentName"
+                app:layout_constraintTop_toBottomOf="@id/numhabDetails"
+                app:layout_constraintEnd_toEndOf="@id/continentName"/>
+
+            <TextView
+                android:id="@+id/sizeDetails"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                tools:text="@string/size"
+                android:textColor="#656565"
+                android:textSize="16sp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintStart_toStartOf="@id/continentName"
+                app:layout_constraintTop_toBottomOf="@id/descriptionNumhab"
+                app:layout_constraintEnd_toEndOf="@id/continentName"/>
+
+            <TextView
+                android:id="@+id/descriptionSize"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/geoExtension"
+                android:textColor="#656565"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/continentName"
+                app:layout_constraintTop_toBottomOf="@id/sizeDetails"
+                app:layout_constraintEnd_toEndOf="@id/continentName"/>
+
+            <View
+                android:id="@+id/divisor2"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:layout_marginTop="14dp"
+                app:layout_constraintTop_toBottomOf="@id/descriptionSize"
+                app:layout_constraintStart_toStartOf="@id/descriptionSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/cifrao"
+                app:layout_constraintStart_toStartOf="@id/peopleIcon"
+                app:layout_constraintTop_toTopOf="@id/coin"
+                android:importantForAccessibility="no" />
+
+            <TextView
+                android:id="@+id/coin"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                tools:text="@string/coin"
+                android:textSize="16sp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@id/divisor2"
+                app:layout_constraintEnd_toEndOf="@id/sizeDetails"
+                app:layout_constraintStart_toStartOf="@id/sizeDetails"/>
+
+            <TextView
+                android:id="@+id/currency"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/coin"
+                app:layout_constraintTop_toBottomOf="@id/coin"
+                app:layout_constraintStart_toStartOf="@id/coin"
+                app:layout_constraintEnd_toEndOf="@id/coin"
+                />
+
+            <View
+                android:id="@+id/divisor3"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:layout_marginTop="14dp"
+                app:layout_constraintTop_toBottomOf="@id/currency"
+                app:layout_constraintStart_toStartOf="@id/currency"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

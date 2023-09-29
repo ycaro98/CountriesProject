@@ -1,0 +1,21 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MyApplication" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+         <item name="colorPrimary">#162B9F</item>
+         <item name="colorSurface">#FFFFFF</item>
+        <item name="colorPrimaryDark">#005CA9</item>
+    </style>
+
+    <style name="Base.Theme.MyApplication.Toolbar" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:textColorSecondary">@android:color/white</item>
+    </style>
+    <style name="Theme.MyApplication" parent="Base.Theme.MyApplication" />
+
+    <style name="Base.Theme.MyActionBar" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">#005CA9</item>
+    </style>
+
+
+</resources>

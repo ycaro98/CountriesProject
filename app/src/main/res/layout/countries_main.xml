@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/country_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="12dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginEnd="12dp"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="12dp"
+    android:foreground="?selectableItemBackgroundBorderless">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/detalhes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <ImageView
+            android:id="@+id/flag"
+            android:layout_width="36dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="12dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/brazil"
+            android:contentDescription="@string/bandeira" />
+
+        <TextView
+            android:id="@+id/country"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="@string/country"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@id/location_point"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/location_point"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/location_point"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="12dp"
+            android:src="@drawable/location"
+            app:layout_constraintBottom_toBottomOf="@id/continent"
+            app:layout_constraintStart_toEndOf="@id/flag"
+            app:layout_constraintTop_toTopOf="@id/continent"
+            app:tint="#656565"
+            android:contentDescription="@string/icone_de_localizacao" />
+
+        <TextView
+            android:id="@+id/continent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="6dp"
+            android:text="@string/continent"
+            android:textColor="#656565"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@id/divisor"
+            app:layout_constraintStart_toEndOf="@id/location_point"
+            app:layout_constraintTop_toBottomOf="@id/country" />
+
+
+        <ImageView
+            android:id="@+id/people_icon"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/people"
+            app:layout_constraintStart_toStartOf="@id/location_point"
+            app:layout_constraintTop_toTopOf="@id/num_inhab"
+            app:layout_constraintBottom_toBottomOf="@id/num_inhab"
+            app:tint="#656565"
+            android:contentDescription="@string/icon_numero_habitantes" />
+
+        <TextView
+            android:id="@+id/num_inhab"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/num_inab"
+            android:textColor="#656565"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/divisor"
+            app:layout_constraintStart_toStartOf="@id/continent"
+            app:layout_constraintTop_toBottomOf="@id/continent" />
+
+        <ImageView
+            android:id="@+id/money_icon"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/cifrao"
+            app:layout_constraintStart_toStartOf="@id/people_icon"
+            app:layout_constraintTop_toTopOf="@id/moeda"
+            app:layout_constraintBottom_toBottomOf="@id/moeda"
+            app:tint="#656565"
+            android:contentDescription="@string/icon_moeda" />
+
+        <TextView
+            android:id="@+id/moeda"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="@string/coin"
+            android:textColor="#656565"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/num_inhab"
+            app:layout_constraintStart_toStartOf="@id/num_inhab"
+            app:layout_constraintEnd_toEndOf="@id/divisor"
+            app:layout_constraintBottom_toBottomOf="@id/detalhes"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="168dp" />
+
+        <View
+            android:id="@+id/divisor"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:background="#E0E0E0"
+            app:layout_constraintBottom_toBottomOf="@id/moeda"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toTopOf="@id/continent" />
+
+        <TextView
+            android:id="@+id/city"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/city"
+            android:layout_marginStart="12dp"
+            android:textColor="#656565"
+            android:textSize="14sp"
+            app:layout_constraintTop_toTopOf="@id/continent"
+            app:layout_constraintEnd_toEndOf="@id/country"
+            app:layout_constraintStart_toEndOf="@id/continent"
+            app:layout_constraintBottom_toBottomOf="@id/continent"/>
+
+        <TextView
+            android:id="@+id/language_city"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/language"
+            android:textColor="#656565"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/country"
+            app:layout_constraintStart_toStartOf="@+id/city"
+            app:layout_constraintTop_toTopOf="@id/num_inhab"
+            app:layout_constraintBottom_toBottomOf="@id/num_inhab"/>
+
+        <TextView
+            android:id="@+id/size_city"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/size"
+            android:textColor="#656565"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/country"
+            app:layout_constraintStart_toStartOf="@id/language_city"
+            app:layout_constraintTop_toTopOf="@id/moeda"
+            app:layout_constraintBottom_toBottomOf="@id/moeda"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
