@@ -11,25 +11,36 @@ import java.io.BufferedReader
 import java.io.InputStreamReader
 import java.nio.charset.StandardCharsets
 
+/*
+* Esta é a classe principal que representa a tela inicial do aplicativo
+* */
 class MainActivity : AppCompatActivity() {
 
+    // Binding para a interface de usuário
     private lateinit var binding: ActivityMainBinding
+
+    //  Adaptador para a lista de países
     private lateinit var adapterCountries: AdapterCountries
+
+    // Lista de países
     private var listCountries: MutableList<Countries> = mutableListOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        // Infla o layout e configura a view
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        // Configuração do RecyclerView
         val recyclerViewCountries = binding.recycler
         recyclerViewCountries.layoutManager = LinearLayoutManager(this)
         recyclerViewCountries.setHasFixedSize(true)
-//        itemList()
 
+        // Lê o conteúdo do arquivo e popula a lista de países
         listCountries = getFileObjectList(readFile())
 
-        //faz um imageView responder como button na view e adiciona cria um gancho de item para a tela DetailsActivity
+        //Configuração do Adapter para o RecyclerView
         adapterCountries = AdapterCountries(this, listCountries) {
             val intent = Intent(this, DetailsActivity::class.java)
             intent.putExtra("countryName", it.name)
@@ -43,21 +54,21 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("imageAuthor", it.imageAuthor)
             intent.putExtra("imageCopyright", it.imageCopyright)
             intent.putExtra("imageName", it.imageName)
-            intent.putExtra("description",it.description)
+            intent.putExtra("description", it.description)
 
             startActivity(intent)
         }
         recyclerViewCountries.adapter = adapterCountries
 
-        //cria um intent button para o botão sobre
+        //cria um intent para o botão "Sobre"
         binding.sobre.setOnClickListener {
             val intent = Intent(this, AboutActivity::class.java)
             startActivity(intent)
         }
-
-
     }
-
+    /*
+    * Lê o conteúdo do arquvio "info.txt" e retorna como uma String
+    * */
     private fun readFile(): String {
         val stream = assets.open("info.txt")
         val br = BufferedReader(InputStreamReader(stream, StandardCharsets.UTF_8))
@@ -73,6 +84,9 @@ class MainActivity : AppCompatActivity() {
         return builder.toString()
     }
 
+    /*
+    * Converte o conteúdo do arquivo "info.txt" em uma lista de objetos[Countries]
+    */
     private fun getFileObjectList(content: String): MutableList<Countries> {
         val countriesList = mutableListOf<Countries>()
         val portions = content.split("#").filter { it.isNotBlank() }
@@ -81,14 +95,18 @@ class MainActivity : AppCompatActivity() {
             val lines = p.split("\n").filter { it.isNotBlank() }
 
             val nameValue = lines[10].split(": ")[1]
-            val continentValue =  lines[2].split(": ")[1]
-            val numHabValue =  lines[11].split(": ")[1]
-            val coinValue =  lines[3].split(": ")[1]
-            val cityValue =  lines[1].split(": ")[1]
-            val languageValue =  lines[9].split(": ")[1]
-            val sizeValue =  lines[0].split(": ")[1]
-            val flagValue = resources.getIdentifier(getImageName(lines[5].split(": ")[1]), "drawable",packageName)
-            val imageCountryValue = resources.getIdentifier(getImageName(lines[6].split(": ")[1]), "drawable",packageName)
+            val continentValue = lines[2].split(": ")[1]
+            val numHabValue = lines[11].split(": ")[1]
+            val coinValue = lines[3].split(": ")[1]
+            val cityValue = lines[1].split(": ")[1]
+            val languageValue = lines[9].split(": ")[1]
+            val sizeValue = lines[0].split(": ")[1]
+            val flagValue = resources.getIdentifier(
+                getImageName(lines[5].split(": ")[1]), "drawable", packageName
+            )
+            val imageCountryValue = resources.getIdentifier(
+                getImageName(lines[6].split(": ")[1]), "drawable", packageName
+            )
             val imageAuthorValue = lines[7].split(": ")[1]
             val imageCopyrightValue = lines[12].split(": ")[1]
             val imageNameValue = lines[8].split(": ")[1]
@@ -115,8 +133,11 @@ class MainActivity : AppCompatActivity() {
         return countriesList
     }
 
-    private fun getImageName(image: String): String{
-        return image.replace('-','_').substring(0,image.indexOf('.'))
+    /*
+    *Obtém o nome da imagem a partir de um determinado caminho e muda o caracter selecionado
+     */
+    private fun getImageName(image: String): String {
+        return image.replace('-', '_').substring(0, image.indexOf('.'))
 
     }
 
