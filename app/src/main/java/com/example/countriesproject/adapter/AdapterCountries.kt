@@ -2,7 +2,6 @@ package com.example.countriesproject.adapter
 
 import android.content.Context
 import android.graphics.Typeface
-import android.text.Spannable
 import android.text.SpannableString
 import android.text.Spanned
 import android.text.style.StyleSpan
@@ -15,6 +14,8 @@ import com.example.countriesproject.model.Countries
 
 ;
 import java.text.DecimalFormat
+import java.text.NumberFormat
+import java.util.Locale
 
 /*
 * Adapter personalizado para exibir a lista de países
@@ -48,7 +49,11 @@ class AdapterCountries(
         fun createCountry(country: Countries, clickAction: (Countries) -> Unit) {
             binding.country.text = country.name
             binding.continent.text = country.continentName
-            binding.numInhab.text = country.numHab?.addSpaceSeparator()
+            //metodo que retorna um espaçamento a cada 3 caracteres
+            val locale = Locale("pt", "BR")
+            val nf = NumberFormat.getNumberInstance(locale)
+            binding.numInhab.text = nf.format(country.numHab?.toDouble()).replace("."," ")//?.addSpaceSeparator()
+
             binding.moeda.text = country.coin
             binding.city.text = country.city
             binding.languageCity.text = country.language
@@ -61,6 +66,7 @@ class AdapterCountries(
             val nameCountry = SpannableString(country.name)
             nameCountry.setSpan(bold, 0, nameCountry.length?:0, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
             binding.country.text = nameCountry
+
 
         }
 

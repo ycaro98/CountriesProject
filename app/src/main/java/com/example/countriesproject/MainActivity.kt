@@ -1,10 +1,7 @@
 package com.example.countriesproject
 
 import android.content.Intent
-import android.graphics.Typeface
 import android.os.Bundle
-import android.text.Spanned
-import android.text.style.StyleSpan
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.countriesproject.databinding.ActivityMainBinding
