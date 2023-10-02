@@ -1,7 +1,10 @@
 package com.example.countriesproject
 
 import android.content.Intent
+import android.graphics.Typeface
 import android.os.Bundle
+import android.text.Spanned
+import android.text.style.StyleSpan
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.countriesproject.databinding.ActivityMainBinding
@@ -66,6 +69,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
     /*
     * Lê o conteúdo do arquvio "info.txt" e retorna como uma String
     * */
@@ -129,7 +133,6 @@ class MainActivity : AppCompatActivity() {
             )
             countriesList.add(countriesObject)
         }
-
         return countriesList
     }
 
@@ -138,61 +141,5 @@ class MainActivity : AppCompatActivity() {
      */
     private fun getImageName(image: String): String {
         return image.replace('-', '_').substring(0, image.indexOf('.'))
-
     }
-
-
-//    private fun itemList() {
-//        val country1 = Countries(
-//            "Brazil",
-//            "South America",
-//            "2 817 068",
-//            "Real",
-//            "Brasilia",
-//            "Portuguese",
-//            "5.779 km² ",
-//            R.drawable.brazil,
-//            R.drawable.bra,
-//            "Revol Web",
-//            "https://www.flickr.com/photos/revolweb/15956587634",
-//            "Ilha do Campeche - Santa Catarina, Brazil"
-//        )
-//        listCountries.add(country1)
-//
-//        val country2 = Countries(
-//            "England",
-//            "Europa",
-//            "8 982 000",
-//            "Libra",
-//            "London",
-//            "English",
-//            "1.572 km²",
-//            R.drawable.united_kingdom,
-//            R.drawable.uk,
-//            "Giuseppe Milo",
-//            "https://www.flickr.com/photos/giuseppemilo/45679070022",
-//            "Tower bridge - London, United Kingdom"
-//        )
-//        listCountries.add(country2)
-//
-//        val country3 =
-//            Countries(
-//                "China",
-//                "Asia",
-//                "21 000 054",
-//                "Reiminbi",
-//                "Pequim",
-//                "Mandarim",
-//                "16.411 km²",
-//                R.drawable.china,
-//                R.drawable.chn,
-//                "Diego Aviles",
-//                "https://www.flickr.com/photos/diegoaviles/9521940433",
-//                "Great Wall of China"
-//
-//            )
-//        listCountries.add(country3)
-//
-//        listCountries.sortBy { it.name }
-//    }
 }
