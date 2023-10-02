@@ -1,6 +1,11 @@
 package com.example.countriesproject.adapter
 
 import android.content.Context
+import android.graphics.Typeface
+import android.text.Spannable
+import android.text.SpannableString
+import android.text.Spanned
+import android.text.style.StyleSpan
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -48,7 +53,13 @@ class AdapterCountries(
             binding.languageCity.text = country.language
             binding.sizeCity.text = country.size
             country.flag?.let { binding.flag.setImageResource(it) }
-            binding.countryCard.setOnClickListener{clickAction(country)}
+            binding.countryCard.setOnClickListener { clickAction(country) }
+
+            //adiciona negrito ao nome do país na CardView
+            val bold = StyleSpan(Typeface.BOLD)
+            val nameCountry = SpannableString(country.name)
+            nameCountry.setSpan(bold, 0, nameCountry.length?:0, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+            binding.country.text = nameCountry
         }
     }
 
