@@ -1,5 +1,8 @@
 package com.example.countriesproject.model
 
+/*
+* Define uma data class chamada Countries para representar informações sobre países
+* */
 data class Countries(
     val name: String? = null,
     val continentName: String? = null,
