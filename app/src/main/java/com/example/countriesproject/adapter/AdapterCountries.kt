@@ -14,6 +14,7 @@ import com.example.countriesproject.model.Countries
 
 
 ;
+import java.text.DecimalFormat
 
 /*
 * Adapter personalizado para exibir a lista de países
@@ -47,7 +48,7 @@ class AdapterCountries(
         fun createCountry(country: Countries, clickAction: (Countries) -> Unit) {
             binding.country.text = country.name
             binding.continent.text = country.continentName
-            binding.numInhab.text = country.numHab
+            binding.numInhab.text = country.numHab?.addSpaceSeparator()
             binding.moeda.text = country.coin
             binding.city.text = country.city
             binding.languageCity.text = country.language
@@ -60,7 +61,13 @@ class AdapterCountries(
             val nameCountry = SpannableString(country.name)
             nameCountry.setSpan(bold, 0, nameCountry.length?:0, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
             binding.country.text = nameCountry
+
+        }
+
+        //metodo que retorna um espaçamento a cada 3 caracteres
+        fun String.addSpaceSeparator():String {
+            val regex = "(\\d)(?=(\\d{3})+\$)".toRegex()
+            return this.replace(regex, "\$1 ")
         }
     }
-
 }
