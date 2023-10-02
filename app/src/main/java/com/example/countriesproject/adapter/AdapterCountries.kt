@@ -10,10 +10,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.countriesproject.databinding.CountriesMainBinding
 import com.example.countriesproject.model.Countries
-
-
-;
-import java.text.DecimalFormat
 import java.text.NumberFormat
 import java.util.Locale
 
