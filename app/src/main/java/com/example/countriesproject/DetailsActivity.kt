@@ -12,24 +12,30 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import com.example.countriesproject.R
 import com.example.countriesproject.databinding.ActivityDetailsBinding
 import com.example.countriesproject.databinding.ActivityLayoutCustomDialogBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
-
+/*
+* Esta classe representa a Activity que exibe os detalhes de um país
+* */
 class DetailsActivity : AppCompatActivity() {
 
+    //Binding para a interface do usuário
     private lateinit var binding: ActivityDetailsBinding
+
+    //chama uma tela de mensagem interativa customizada
     private lateinit var mDialog: AlertDialog
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        // Infla o layout e configura a view
         binding = ActivityDetailsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        //Obtém os dados passados pela Intent
         val continent = intent?.extras?.getString("continentName")
         val city = intent?.extras?.getString("cityName")
         val language = intent?.extras?.getString("languageName")
@@ -39,6 +45,8 @@ class DetailsActivity : AppCompatActivity() {
         val country = intent?.extras?.getString("countryName")
         val description = intent?.extras?.getString("description")
 
+
+        // Configura a ActionBar e os elementos da tela
         setSupportActionBar(binding.toolbarDetail)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = country
@@ -50,12 +58,12 @@ class DetailsActivity : AppCompatActivity() {
         binding.coin.text = currency
         binding.descriptionCountry.text = description
 
+        //Obtém a imagem do país e a exibe
         getImageCountry()?.let {
             binding.countryDetailImage.setImageResource(it)
         }
-
+        // Inicia o metodo
         initDialog()
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -71,51 +79,60 @@ class DetailsActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
+    /*
+    * Metodo responsavel pela customização do AlertDialog
+    * */
     private fun initDialog() {
         val layoutInflater = LayoutInflater.from(this)
         val binding2 = ActivityLayoutCustomDialogBinding.inflate(layoutInflater, null, false)
 
+        //recebe os dados a serem atribuidos no alertDialog
         val imageAuthor = intent?.extras?.getString("imageAuthor")
         val imageCopyright = intent?.extras?.getString("imageCopyright")
         val imageName = intent?.extras?.getString("imageName")
 
+        //configura os elementos recebidos pelo alertDialog
         binding2.authorImage.text = "Author: $imageAuthor"
         binding2.imageName.text = "$imageName"
-        binding2.linkImageCopyright.setOnClickListener{
+
+        //Configura o link para a licença de imagem
+        binding2.linkImageCopyright.setOnClickListener {
             val uri = Uri.parse("$imageCopyright")
             val intent = Intent(Intent.ACTION_VIEW, uri)
             startActivity(intent)
-//            val intent = Intent(Intent.ACTION_SEND)
-//            intent.setType("text/html")
-//            intent.putExtra(Intent.EXTRA_TEXT, Html.fromHtml(imageCopyright))
-//            startActivity(Intent.createChooser(intent, "share"))
         }
 
-        val nameImage =  SpannableString(binding2.imageName.text)
+        //Estiliza o texto do author no alertDialog
+        val nameImage = SpannableString(binding2.imageName.text)
         val authorImage = SpannableString(binding2.authorImage.text)
         val bold = StyleSpan(Typeface.BOLD)
 
         authorImage.setSpan(bold, 0, 6, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
-        nameImage.setSpan(bold, 0, imageName?.length?:0, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+        nameImage.setSpan(bold, 0, imageName?.length ?: 0, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
 
         binding2.authorImage.text = authorImage
         binding2.imageName.text = nameImage
 
+        //Obtém a imagem do país e a exibe no alertDialog
         getImageCountry()?.let {
             binding2.countryImageDialog.setImageResource(it)
         }
 
+        //Configura o botão "OK" no alert Dialog
         mDialog = MaterialAlertDialogBuilder(this)
             .setView(binding2.root)
             .setCancelable(true)
             .create()
 
-
-        binding2.buttonOk.setOnClickListener{
+        binding2.buttonOk.setOnClickListener {
             mDialog.dismiss()
         }
     }
 
+    /*
+    * Obtém o ID da imagem do país passado pela intent.
+    * Está como GET para que possa ser reutilizado por outros métodos da classe
+     */
     private fun getImageCountry() = intent?.extras?.getInt("imageCountry")
 }
 
