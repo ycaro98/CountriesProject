@@ -61,6 +61,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="2dp"
             android:layout_marginTop="6dp"
+            android:layout_marginEnd="12dp"
             android:text="@string/continent"
             android:textColor="#656565"
             android:textSize="14sp"
@@ -84,10 +85,10 @@
             android:id="@+id/num_inhab"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/num_inab"
+            tools:text="@string/num_inab"
             android:textColor="#656565"
             android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="@id/divisor"
+            app:layout_constraintEnd_toEndOf="@id/continent"
             app:layout_constraintStart_toStartOf="@id/continent"
             app:layout_constraintTop_toBottomOf="@id/continent" />
 
@@ -112,7 +113,7 @@
             android:textSize="14sp"
             app:layout_constraintTop_toBottomOf="@id/num_inhab"
             app:layout_constraintStart_toStartOf="@id/num_inhab"
-            app:layout_constraintEnd_toEndOf="@id/divisor"
+            app:layout_constraintEnd_toEndOf="@id/continent"
             app:layout_constraintBottom_toBottomOf="@id/detalhes"/>
 
         <androidx.constraintlayout.widget.Guideline
@@ -141,7 +142,7 @@
             android:textSize="14sp"
             app:layout_constraintTop_toTopOf="@id/continent"
             app:layout_constraintEnd_toEndOf="@id/country"
-            app:layout_constraintStart_toEndOf="@id/continent"
+            app:layout_constraintStart_toEndOf="@id/divisor"
             app:layout_constraintBottom_toBottomOf="@id/continent"/>
 
         <TextView
@@ -152,7 +153,7 @@
             android:textColor="#656565"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="@id/country"
-            app:layout_constraintStart_toStartOf="@+id/city"
+            app:layout_constraintStart_toStartOf="@id/city"
             app:layout_constraintTop_toTopOf="@id/num_inhab"
             app:layout_constraintBottom_toBottomOf="@id/num_inhab"/>
 
@@ -164,7 +165,7 @@
             android:textColor="#656565"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="@id/country"
-            app:layout_constraintStart_toStartOf="@id/language_city"
+            app:layout_constraintStart_toStartOf="@id/city"
             app:layout_constraintTop_toTopOf="@id/moeda"
             app:layout_constraintBottom_toBottomOf="@id/moeda"/>
 

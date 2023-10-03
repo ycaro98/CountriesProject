@@ -41,19 +41,19 @@ class AdapterCountries(
     inner class CountryViewHolder(private val binding: CountriesMainBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
+        //metodo que retorna um espaçamento a cada 3 caracteres
+        val locale = Locale("pt", "BR")
+        val nf = NumberFormat.getNumberInstance(locale)
+
         //Método para configurar a visualização com os dados do país
         fun createCountry(country: Countries, clickAction: (Countries) -> Unit) {
             binding.country.text = country.name
             binding.continent.text = country.continentName
-            //metodo que retorna um espaçamento a cada 3 caracteres
-            val locale = Locale("pt", "BR")
-            val nf = NumberFormat.getNumberInstance(locale)
             binding.numInhab.text = nf.format(country.numHab?.toDouble()).replace("."," ")//?.addSpaceSeparator()
-
             binding.moeda.text = country.coin
             binding.city.text = country.city
             binding.languageCity.text = country.language
-            binding.sizeCity.text = country.size
+            binding.sizeCity.text = nf.format(country.size?.toDouble())+(" km²")
             country.flag?.let { binding.flag.setImageResource(it) }
             binding.countryCard.setOnClickListener { clickAction(country) }
 
@@ -62,8 +62,6 @@ class AdapterCountries(
             val nameCountry = SpannableString(country.name)
             nameCountry.setSpan(bold, 0, nameCountry.length?:0, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
             binding.country.text = nameCountry
-
-
         }
 
         //metodo que retorna um espaçamento a cada 3 caracteres

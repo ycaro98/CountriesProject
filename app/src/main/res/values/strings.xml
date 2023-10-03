@@ -1,14 +1,14 @@
 <resources>
     <string name="app_name">CountriesProject</string>
     <string name="title">Países</string>
-    <string name="coin">Currency</string>
-    <string name="language">Language</string>
-    <string name="num_inab">68 455 083</string>
-    <string name="numhabDetails">Population</string>
-    <string name="continent">Continent</string>
-    <string name="geoExtension">Geographic Extension</string>
-    <string name="country">Brazil</string>
-    <string name="city">City</string>
+    <string name="coin">Moeda</string>
+    <string name="language">Idioma</string>
+    <string name="num_inab">168 455 083</string>
+    <string name="numhabDetails">População</string>
+    <string name="continent">Continente</string>
+    <string name="geoExtension">Extensão Geográfica</string>
+    <string name="country">Brasil</string>
+    <string name="city">Cidade</string>
     <string name="capital">Capital</string>
     <string name="size">Size</string>
     <string name="otherApp">Sobre o Aplicativo</string>
@@ -30,7 +30,6 @@ Fusce eu sem massa. Nullam non porttitor ipsum, sed porta mauris. Nullam imperdi
     <string name="setaDireitaDetails">functionality to go back to the previous page</string>
     <string name="settings">settings</string>
     <string name="help">help</string>
-    <string name="seta_direita">seta_direita</string>
     <string name="my_application">countriesproject</string>
     <string name="recebe_uma_imagem_do_pa_s_em_quest_o">Recebe uma imagem do país em questão</string>
     <string name="information_icon">information_icon</string>

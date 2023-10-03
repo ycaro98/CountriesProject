@@ -15,6 +15,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.countriesproject.databinding.ActivityDetailsBinding
 import com.example.countriesproject.databinding.ActivityLayoutCustomDialogBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import java.text.NumberFormat
+import java.util.Locale
 
 /*
 * Esta classe representa a Activity que exibe os detalhes de um país
@@ -45,6 +47,8 @@ class DetailsActivity : AppCompatActivity() {
         val country = intent?.extras?.getString("countryName")
         val description = intent?.extras?.getString("description")
 
+        val locale = Locale("pt", "BR")
+        val nf = NumberFormat.getNumberInstance(locale)
 
         // Configura a ActionBar e os elementos da tela
         setSupportActionBar(binding.toolbarDetail)
@@ -53,8 +57,8 @@ class DetailsActivity : AppCompatActivity() {
         binding.continentName.text = continent
         binding.cityDetails.text = city
         binding.languageDetails.text = language
-        binding.numhabDetails.text = numHab
-        binding.sizeDetails.text = geoExt
+        binding.numhabDetails.text = nf.format(numHab?.toDouble()).replace("."," ")
+        binding.sizeDetails.text = nf.format(geoExt?.toDouble())+(" km²")
         binding.coin.text = currency
         binding.descriptionCountry.text = description
 

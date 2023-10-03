@@ -13,7 +13,6 @@ class AboutActivity : AppCompatActivity() {
     //Binding para a interface de usuário
     private lateinit var binding: ActivityAboutBinding
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
