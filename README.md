@@ -1,7 +1,7 @@
 # CountriesProject
   Este é um aplicativo Android que exibe informações sobre diferentes países, como nome, continente, , número de habitantes, moeda, entre outros. Ele também permite visualizar detalhes específicos de cada país.
 
-📌## Funcionalidades
+## 📌 Funcionalidades
 
 -  O sistema fornece uma lista contendo os países pré estabelecidos exibindo-os em ordem alfabética por padrão.
   Cada item da lista exibe a bandeira, nome, continente, extensão (km²), total de habitantes, idioma e a moeda local.
