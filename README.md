@@ -8,10 +8,10 @@
   Os textos da tela apresentão quebra de linha, caso não caibam na porção da tela dedicada a eles.
   Ao clicar em um item da lista,é mostrado o efeito de clique (Ripple Effect).
 
-- O sistema mostrar os detalhes de um país após o usuário clicar em um item da lista.
+- O sistema mostra os detalhes de um país após o usuário clicar em um item da lista.
   O título é exibido em apenas 1 linha.
   É exibido a tela por meio do Coordinator Layout, fazendo um efeito de paralaxe com a imagem principal do país.
-  Na barra de ação há um botão que ao ser clicado abre um AlertDialog para mostrar informações da imagem principal. Nesse alerta, há um link para o endereço da imagem que é aberto no navegador ao     clicar.
+  Na barra de ação há um botão que ao ser clicado abre um AlertDialog para mostrar informações da imagem principal. Nesse alerta, há um link para o endereço da imagem que é aberto no navegador ao clicar.
 
 - Na tela inicial, o aplicativo possui um botão na barra de ação que levará à tela de informações sobre o aplicativo. Nesta tela há informações sobre licenças e copyright.
 
