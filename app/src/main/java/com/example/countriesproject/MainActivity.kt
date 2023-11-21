@@ -68,7 +68,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     /*
-    * Lê o conteúdo do arquvio "info.txt" e retorna como uma String
+    * Lê o conteúdo do arquivo "info.txt" e retorna como uma String
     * */
     private fun readFile(): String {
         val stream = assets.open("info.txt")

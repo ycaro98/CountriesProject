@@ -15,22 +15,29 @@
         <activity
             android:name=".DetailsActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
         <activity
-            android:theme="@style/Base.Theme.MyActionBar"
-            android:label="@string/otherApp"
             android:name=".AboutActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity"/>
+            android:label="@string/otherApp"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Base.Theme.MyActionBar" />
+
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:parentActivityName=".MainActivity"
+            android:splitName=".LoginActivity"
+            android:theme="@style/Base.Theme.MyActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

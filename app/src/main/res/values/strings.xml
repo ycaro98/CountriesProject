@@ -43,4 +43,9 @@ Fusce eu sem massa. Nullam non porttitor ipsum, sed porta mauris. Nullam imperdi
     <string name="icone_de_localizacao">ícone de localização</string>
     <string name="icon_numero_habitantes">número de habitantes</string>
     <string name="icon_moeda">ícone de moeda</string>
+    <string name="welcome">Welcome</string>
+    <string name="preencha">Preencha o seu usuário e senha para continuar</string>
+    <string name="username">Username</string>
+    <string name="senha">Senha</string>
+    <string name="entrar">Entrar</string>
 </resources>
